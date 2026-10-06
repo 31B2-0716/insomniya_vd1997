@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <locale.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
+int task1() {
+	int year;
+	printf("Введите год \n");
+	scanf("%d", &year);
+	if (year % 4 == 0) printf("год %d - високосный", year);
+	else printf("год %d - не високосный", year);
+	return 0;
+}
+int task2() {
+	int year;
+	printf("Введите год \n");
+	scanf("%d", &year); 
+	if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) printf("год %d - високосный", year);
+	else printf("год %d - не високосный", year);
+	return 0;
+}
+int task3() {
+	double x, f;
+	printf("Контрольный пример: если x = 4, то f = 725, а если x = 1, то f = 0.45\n");
+	printf("Введите значение x\n");
+	scanf("%lf", &x);
+	f = x > 3.6 ? 45 * pow(x, 2) + 5 : 5 * x / (10 * pow(x, 2) + 1);
+	printf("Значение функции f = %lg\n", f);
+	printf("Ответ: %lg", f); 
+	return 0;
+}
+int task4() {
+	int x, y;
+	char znak;
+	printf("Введите первое число ");
+	scanf("%d", &x);
+	printf("Введите второе число ");
+	scanf("%d", &y);
+	if (x > y) {
+		znak = '>';
+	}
+	else if (x < y) {
+		znak = '<';
+	} 
+	else {
+		znak = '=';
+	}
+	printf("%d %c %d", x, znak, y);
+	return 0;
+}
+
+int main() {
+	setlocale(LC_CTYPE, ".UTF-8");
+	//task1();
+	//task2();
+	//task3();
+	task4();
