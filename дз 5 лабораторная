@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <locale.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
+int main() {
+	setlocale(LC_CTYPE, "RUS");
+	double x, y, f;
+	printf("Введите значение x, y\n");
+	scanf("%le %lf", &x, &y);
+	printf("При x = %le, y = %lg значение f = %lf\n", x, y, 1 + pow(tan(y + (x / (pow(y, 2) + fabs(pow(x, 2) / (y + (pow(x, 3) / 3)))))), 2));
+	printf("Ответ: %.3f", 1 + pow(tan(y + (x / (pow(y, 2) + fabs(pow(x, 2) / (y + (pow(x, 3) / 3)))))), 2));
+	return 0;
+}
