@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <locale.h>
+int task1() {
+	printf("Программа выведет 10 звёздочек\n");
+	for (int start = 1; start <= 10; start++) putchar('*');
+	putchar('\n');
+
+	putchar('+');
+	for (int start = 1; start <= 8; start++) putchar('*');
+	putchar('+');
+	putchar('\n');
+	for (int start = 1; start <= 5; start++)
+		putchar('+');
+	for (int start = 1; start <= 5; start++) putchar('+');
+	putchar('\n');
+	for (int start = 1; start <= 5; start++) {
+		putchar('*');
+		putchar('!');
+	}
+	return 0; 
+}
+int main() {
+	setlocale(LC_CTYPE, "RUS");
+	task1();
+} 
