@@ -1,0 +1,28 @@
+#include <stdio.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
+#include <locale.h>
+int task8() {
+	double a, b;
+	double x, y, h, eps;
+	a = -1;
+	b = 2;
+	eps = 0.00001;
+	printf("введите значение шага h: ");
+	scanf("%lg", &h);
+	puts("     x              y      ");
+	puts("---------------------------");
+	for (x = 2.0; x < b + eps; x += h) {
+		y = pow(x, 4) - 2 * pow(x, 2) + 1;
+		printf("%7.2lf %16.4f\n", x, y);
+	}
+	return 0;
+}
+int task10() {
+
+}
+
+int main() {
+	setlocale(LC_CTYPE, "RUS");
+	task8();
+}
